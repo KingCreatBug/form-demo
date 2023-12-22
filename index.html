@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Demo form</title>
+        <!-- Font awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <main>
+            <div class="heading">
+                <h1>Liên hệ với chúng tôi</h1>
+                <p>Bạn muốn tạo thiệp? Hãy liên hệ với chúng tôi!</p>
+            </div>
+
+            <div class="container">
+                <!-- Contact info -->
+                <section class="contact-info">
+                    <h2>Thông tin liên hệ</h2>
+                    <p class="desc">
+                        Điền vào biểu mẫu và Nhóm sẽ liên hệ với bạn trong vòng
+                        24 giờ.
+                    </p>
+
+                    <div class="info-item">
+                        <span class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+                        <span class="value">+84123456789</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                        <span class="value">hello@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
+                        <span class="value">117 Nguyễn Thị Thập</span>
+                    </div>
+
+                    <div class="socials">
+                        <a href="#!" class="item">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#!" class="item">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#!" class="item">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#!" class="item">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+
+                    <div class="circle"></div>
+                    <div class="circle large"></div>
+                </section>
+
+                <!-- Contact form -->
+                <div class="contact-form">
+                    <form
+                        action="https://api-gateway.fullstack.edu.vn/action_page.php"
+                        autocomplete="off"
+                        method="POST"
+                    >
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name" class="form-label"
+                                    >Họ và tên đệm</label
+                                >
+                                <input
+                                    type="text"
+                                    name="first-name"
+                                    id="first-name"
+                                    class="form-input"
+                                    placeholder="Nhập họ và tên đêm"
+                                    required
+                                    minlength="2"
+                                />
+                                <p class="form-error">Nhập ít nhất 2 ký tự</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="last-name" class="form-label"
+                                    >Tên</label
+                                >
+                                <input
+                                    type="text"
+                                    id="last-name"
+                                    name="last-name"
+                                    class="form-input"
+                                    placeholder="Nhập tên của bạn"
+                                    required
+                                    minlength="2"
+                                />
+                                <p class="form-error">Nhập ít nhất 2 ký tự</p>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="mail" class="form-label"
+                                    >Email</label
+                                >
+                                <input
+                                    type="email"
+                                    id="mail"
+                                    name="email"
+                                    class="form-input"
+                                    placeholder="Nhập email của bạn"
+                                    required
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                />
+                                <p class="form-error">Nhập đúng email</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" class="form-label"
+                                    >Số điện thoại</label
+                                >
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    class="form-input"
+                                    placeholder="Nhập số điện thoại của bạn"
+                                    required
+                                    pattern="^(0|\+?84)(3|5|7|8|9)[0-9]{8}$"
+                                />
+                                <p class="form-error">
+                                    Nhập đúng số điện thoại
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="" class="form-label large">
+                                    Bạn muốn làm thiệp gì ?
+                                </label>
+
+                                <div class="radio-group">
+                                    <div class="radio-btn">
+                                        <input
+                                            type="radio"
+                                            name="type"
+                                            id="wedding"
+                                            value="wedding"
+                                            checked
+                                        />
+                                        <label for="wedding">
+                                            Thiệp đám cưới
+                                        </label>
+                                    </div>
+
+                                    <div class="radio-btn">
+                                        <input
+                                            type="radio"
+                                            name="type"
+                                            id="betrothal"
+                                            value="betrothal"
+                                        />
+                                        <label for="betrothal">
+                                            Thiệp đám hỏi
+                                        </label>
+                                    </div>
+
+                                    <div class="radio-btn">
+                                        <input
+                                            type="radio"
+                                            name="type"
+                                            id="birth-day"
+                                            value="birth-day"
+                                        />
+                                        <label for="birth-day">
+                                            Thiệp sinh nhật
+                                        </label>
+                                    </div>
+
+                                    <div class="radio-btn">
+                                        <input
+                                            type="radio"
+                                            name="type"
+                                            id="other"
+                                            value="other"
+                                        />
+                                        <label for="other"> Khác </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="message" class="form-label"
+                                    >Mong muốn</label
+                                >
+                                <textarea
+                                    name="message"
+                                    id="message"
+                                    class="form-textarea"
+                                    placeholder="Cho chúng tôi biết về mong muốn của bạn ..."
+                                    oninput="onResize(this)"
+                                    required
+                                    minlength="10"
+                                >
+                                </textarea>
+                                <p class="form-error">Nhập ít nhất 10 ký tự</p>
+                            </div>
+                        </div>
+
+                        <div class="form-row submit-box">
+                            <button type="submit" class="submit-btn">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <script>
+            function onResize(e) {
+                e.style.height = "auto";
+                e.style.height = e.scrollHeight + 1 + "px";
+            }
+        </script>
+    </body>
+</html>
